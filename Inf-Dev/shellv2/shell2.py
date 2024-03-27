@@ -5,17 +5,48 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import ttk, filedialog
 import sys
-
+from reloading import reloading
 # Handling Arguments
 parser = argparse.ArgumentParser()
-parser.add_argument("-G", "--GUI", action="store_true",help="Enables GUI")
-parser.add_argument("-S", "--Shell", action="store_true", help="Enables Shell")
+
+# Modal Changing
+parser.add_argument("-G", "--GUI", action="store_true",help="Enables GUI", required=False)
+parser.add_argument("-S", "--Shell", action="store_true", help="Enables Shell",required=False)
+
+#Debug Mode
+parser.add_argument("-D", "--Debug", action="store_true", help="Enters debug mode", required=False)
+
+# Toggleables
+parser.add_argument("-event", "--EventCount", nargs='?', const=1, type = int, help = "# of Events", required=False)
+parser.add_argument("-const", "--GlobalConstCount", nargs='?', const=1, type = int, help = "# of Global Consts Variables", required=False)
+parser.add_argument("-func", "--FuncCount", nargs='?', const=1, type = int, help = "# of Functions", required=False)
+parser.add_argument("-actItem", "--ActorItems", nargs='?', const=1, type = int, help = "# of Item in an Actor", required=False)
+parser.add_argument("-act", "--ActorsNum", nargs='?', const=1, type = int, help = "# of Actors", required=False)
+parser.add_argument("-state", "--StateNum", nargs='?', const=1, type = int, help = "# of States", required=False)
+parser.add_argument("-uV", "--UnsafeVariableDeclare", action="store_true", help = "Disables safe variable assignments", required=False)
+parser.add_argument("-uE", "--UnsafeEvent", action="store_true", help = "Disable safe events assignment", required=False)
+parser.add_argument("-depth", "--MaxStateDepth", nargs='?', const=1,  type = int, help = "Maximum # of Nested States", required=False)
+
+
 args = parser.parse_args()
 
 
+#Toggleables
+
+event_count = 1
+global_const_count = 1
+func_count = 1
+actor_count = 1
+actor_item_count = 1
+state_item_count = 1
+safe_var_assign = True
+safe_event_calling = True
+max_state_depth = 1
+ 
+
 # Main Shell
-def main():
-    print("please type the 'help' command for command list")
+def shell():
+    print("Please type the 'help' command for command list.")
     while True:
         command = str(input("$ "))
         match command:
@@ -30,6 +61,7 @@ def main():
                 print("CompileSwift - to compile proteus code in swift")
                 print("GUI - Change to GUI")
             case "GUI":
+                print("To return to shell, please close the GUI window")
                 GUI()
             case "setPath":
                 print("temp")
@@ -38,7 +70,7 @@ def main():
             case "CompileSwift":
                 print("temp")
             case _:
-                print("Unrecognized Command, please type 'help' to list valid commands ")
+                print("Unrecognized Command, please type 'help' to list valid commands.")
 
 # GUI Methods
 
@@ -128,13 +160,53 @@ def GUI():
     window.mainloop()
 
 
+# this jank ass code bro
+def SetArgsToggleable():
+    global event_count
+    global global_const_count
+    global func_count
+    global actor_count
+    global actor_item_count
+    global state_item_count
+    global safe_var_assign
+    global safe_event_calling
+    global max_state_depth
 
-# GUI Selection
-if args.GUI:
-    GUI()
+# I had no other coice fr
+    if args.EventCount != event_count:
+        event_count = args.EventCount
+    if args.GlobalConstCount != global_const_count:
+        global_const_count = args.GlobalConstCount
+    if args.FuncCount != func_count:
+        func_count = args.FuncCount
+    if args.ActorItems != actor_item_count:
+        actor_item_count = args.ActorItems
+    if args.ActorsNum != actor_item_count:
+        actor_count = args.ActorsNum
+    if args.StateNum != actor_item_count:
+        state_item_count = args.StateNum
+    if args.UnsafeVariableDeclare:
+        safe_var_assign = False
+    if args.UnsafeEvent:
+        safe_event_calling = False
+    if args.MaxStateDepth != max_state_depth:
+        max_state_depth = args.MaxStateDepth
 
-#Shell Selection
-if args.Shell:
-    main()
+    if args.Debug:
+        print("EC: " + str(event_count) + " GCC: "+ str(global_const_count) + " FC:"+ str(func_count) + " AItemC: "+ str(actor_item_count) +" AC: " + str(actor_count) + " SItemC: "+ str(state_item_count) + " SafeVar: " + str(safe_var_assign) + " SafeEvent: " + str(safe_event_calling)+ " MSD: " + str(max_state_depth))
+        
+         
 
+def main():
+    #print("-h, --help for flags descriptions")
+    # GUI Selection
+    if args.GUI:
+        GUI()
 
+    #Shell Selection
+    if args.Shell:
+       shell()
+        
+    SetArgsToggleable()
+
+main()
