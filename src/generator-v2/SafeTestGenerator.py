@@ -210,26 +210,21 @@ def generate_actor(IC, depth) -> str:
     actor_string += "}\n"
     return actor_string
 
-# ActorItem: DefHSM | DefActorOn | DefMember | DefMethod
+# ActorItem: DefHSM | DefActorOn | DefMember
 def generate_actor_item(IC, depth) -> str:
     actor_item_string = ""
 
-    # DefHSM -> 0
-    # DefActorOn -> 1
-    # DefMember -> 2
-    # DefMethod -> 3
-    #choice = rand_num(0, 0)           # CURRENTLY FORCED TO ONLY PICK DefHSM/DefMember, PENDING IMPLEMENTATION OF OTHER PRODUCTION RULES
-    choice = random.choice([0, 2])
+    choices = ['DefHSM', 'DefActorOn', 'DefMember']
+
+    choice = random.choice(choices)
 
     match choice:
-        case 0:
+        case 'DefHSM':
             actor_item_string = generate_statemachine(IC, depth)
-        case 1:
-            pass
-        case 2:
+        case 'DefActorOn':
+            actor_item_string = generate_actor_on(IC)
+        case 'DefMember':
             actor_item_string = generate_member(IC, depth)
-        case 3:
-            pass
 
     return actor_item_string
 
@@ -300,6 +295,11 @@ def generate_state(IC, depth) -> str:
     state_string += "}\n"
 
     return state_string
+
+def generate_actor_on(IC):
+    event_name = random.choice(all_event_names)  # picks a random event name
+    on_block = "{\n" + indent(IC + 1) + "pass\n" + indent(IC) + "}\n"
+    return indent(IC) + f"on {event_name} {on_block}\n"
 
 # Toggleable
 event_count = 3
