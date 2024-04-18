@@ -1,0 +1,9 @@
+
+const bool something = true;
+
+actor Rami_Malek {
+    on UP {
+        pass
+    }
+
+}

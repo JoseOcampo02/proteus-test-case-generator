@@ -8,6 +8,7 @@ from tkinter import ttk, filedialog
 import sys
 import SafeTestGenerator
 from SafeTestGenerator import *
+from handler import bruh
 #from reloading import reloading
 import string
 
@@ -195,7 +196,7 @@ def SetArgsToggleable():
         print("EC: " + str(SafeTestGenerator.event_count) + " GCC: "+ str(SafeTestGenerator.global_const_count) + " FC:"+ str(SafeTestGenerator.func_count) + " AItemC: "+ str(SafeTestGenerator.actor_item_count) +" AC: " + str(SafeTestGenerator.actor_count) + " SItemC: "+ str(SafeTestGenerator.state_item_count) + " SafeVar: " + str(SafeTestGenerator.safe_var_assign) + " SafeEvent: " + str(SafeTestGenerator.safe_event_calling)+ " MSD: " + str(SafeTestGenerator.max_state_depth))
         printProtey()    
     if args.DirectoryHandler:
-        print("directory handler")
+        bruh()
 
 def main():
     #print("-h, --help for flags descriptions")

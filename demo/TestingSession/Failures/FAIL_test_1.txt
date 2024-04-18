@@ -1,0 +1,74 @@
+event RESET {};
+event CLOSE {bool};
+event GO {};
+event RESET {string, string, bool, string, string};
+event MEOW {};
+
+actor Arnold_Schwarzenegger {
+
+statemachine {
+initial Illinois;
+
+state Delaware {
+initial Maryland;
+
+func delete_this(int isOff) {
+// No syntax provided
+}
+
+exit JUMP {
+// No syntax provided
+}
+
+entry DESTROY {
+// No syntax provided
+}
+
+on START {
+// No syntax provided
+}
+
+}
+
+state Georgia {
+initial New_York;
+
+func do_this(int message, bool count) {
+// No syntax provided
+}
+
+exit BARK {
+// No syntax provided
+}
+
+entry LIFT {
+// No syntax provided
+}
+
+on LIFT {
+// No syntax provided
+}
+
+}
+
+state Utah {
+const bool scope = 911;
+initial South_Carolina;
+
+
+exit RIGHT {
+// No syntax provided
+}
+
+entry DROP {
+// No syntax provided
+}
+
+on UP {
+// No syntax provided
+}
+
+}
+
+}
+}
