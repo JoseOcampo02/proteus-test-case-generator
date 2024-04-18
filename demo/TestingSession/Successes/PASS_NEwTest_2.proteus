@@ -1,0 +1,7 @@
+
+const string scope = "Help, I'm trapped in here";
+
+actor Tom_Hanks {
+    statemachine {
+    }
+}

@@ -1,0 +1,49 @@
+event STOP {bool, bool, bool};
+event TURN {bool};
+event STOP {bool, int};
+event LEFT {};
+
+actor Rami_Malek {
+
+statemachine {
+initial Hawaii;
+
+state Indiana {
+bool script = false;
+initial North_Dakota;
+
+
+exit ACTIVATE {
+// No syntax provided
+}
+
+entry TURN {
+// No syntax provided
+}
+
+on BARK {
+// No syntax provided
+}
+
+}
+
+state Nevada {
+initial Nevada;
+
+
+exit SAVE {
+// No syntax provided
+}
+
+entry SHOVE {
+// No syntax provided
+}
+
+on OPEN {
+// No syntax provided
+}
+
+}
+
+}
+}

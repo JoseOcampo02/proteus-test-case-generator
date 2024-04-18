@@ -1,0 +1,31 @@
+event TERMINATE {bool};
+
+actor Rami_Malek {
+
+statemachine {
+initial Oregon;
+
+state Rhode_Island {
+string key = "input, input, input, inputs!";
+initial Alabama;
+
+func move_up(bool isOff, string value) {
+// No syntax provided
+}
+
+exit DOWN {
+// No syntax provided
+}
+
+entry RESET {
+// No syntax provided
+}
+
+on STOP {
+// No syntax provided
+}
+
+}
+
+}
+}

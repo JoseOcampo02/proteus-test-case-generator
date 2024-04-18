@@ -1,6 +1,0 @@
-event TERMINATE {bool, bool, bool};
-
-
-actor Christoph_Waltz {
-    bool hack = true;
-}
