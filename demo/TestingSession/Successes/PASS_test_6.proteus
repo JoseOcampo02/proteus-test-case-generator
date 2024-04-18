@@ -1,0 +1,7 @@
+event JUMP {bool, int, bool, bool};
+
+
+actor Rami_Malek {
+    statemachine {
+    }
+}

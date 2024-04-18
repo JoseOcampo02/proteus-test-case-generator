@@ -1,0 +1,113 @@
+event OPEN {bool, string, bool, string, int};
+event SAVE {};
+event BARK {};
+event DESTROY {};
+event FALL {string, string, bool, int};
+
+actor Rami_Malek {
+
+statemachine {
+initial Louisiana;
+
+state New_Jersey {
+initial Alabama;
+
+
+exit MEOW {
+// No syntax provided
+}
+
+entry SHOVE {
+// No syntax provided
+}
+
+on LEFT {
+// No syntax provided
+}
+
+}
+
+state Washington {
+initial Wisconsin;
+
+
+exit CLOSE {
+// No syntax provided
+}
+
+entry JUMP {
+// No syntax provided
+}
+
+on SHOVE {
+// No syntax provided
+}
+
+}
+
+state Wyoming {
+initial Delaware;
+
+func move_down(string scope, string var, bool result) -> bool {
+// No syntax provided
+}
+
+exit OPEN {
+// No syntax provided
+}
+
+entry LIFT {
+// No syntax provided
+}
+
+on GO {
+// No syntax provided
+}
+
+}
+
+state Vermont {
+string value = "Here's a random string";
+initial Ohio;
+
+func move_up() -> bool {
+// No syntax provided
+}
+
+exit RESET {
+// No syntax provided
+}
+
+entry UP {
+// No syntax provided
+}
+
+on DROP {
+// No syntax provided
+}
+
+}
+
+state South_Dakota {
+initial Alabama;
+
+func save_this(bool item, int id, int hydra) {
+// No syntax provided
+}
+
+exit BARK {
+// No syntax provided
+}
+
+entry DROP {
+// No syntax provided
+}
+
+on ACTIVATE {
+// No syntax provided
+}
+
+}
+
+}
+}

@@ -1,0 +1,7 @@
+event SAVE {string, bool, bool, int, string};
+
+
+actor Bruce_Willis {
+    statemachine {
+    }
+}

@@ -1,0 +1,53 @@
+event START {};
+event JUMP {};
+event BARK {string, string};
+event OPEN {};
+event BARK {};
+
+actor Keanu_Reeves {
+
+statemachine {
+initial Colorado;
+
+state Rhode_Island {
+initial Wyoming;
+
+func start_clock(int config, int script) -> string {
+// No syntax provided
+}
+
+exit RIGHT {
+// No syntax provided
+}
+
+entry RIGHT {
+// No syntax provided
+}
+
+on UP {
+// No syntax provided
+}
+
+}
+
+state Maryland {
+const string var = "Wiegley should give us an A";
+initial New_Jersey;
+
+
+exit BARK {
+// No syntax provided
+}
+
+entry START {
+// No syntax provided
+}
+
+on RIGHT {
+// No syntax provided
+}
+
+}
+
+}
+}

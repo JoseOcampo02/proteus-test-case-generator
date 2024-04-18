@@ -1,0 +1,7 @@
+event LEFT {string};
+
+
+actor Christoph_Waltz {
+    statemachine {
+    }
+}

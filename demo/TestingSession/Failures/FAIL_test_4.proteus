@@ -1,0 +1,70 @@
+event GO {bool};
+event MEOW {string};
+event LEFT {};
+event LIFT {};
+
+actor Henry_Cavill {
+
+statemachine {
+initial Iowa;
+
+state Rhode_Island {
+string temp = "When will we graduate?";
+initial South_Carolina;
+
+
+exit STOP {
+// No syntax provided
+}
+
+entry REST {
+// No syntax provided
+}
+
+on UP {
+// No syntax provided
+}
+
+}
+
+state North_Dakota {
+initial Arizona;
+
+func start_clock(string count, bool flag, bool count) -> int {
+// No syntax provided
+}
+
+exit RIGHT {
+// No syntax provided
+}
+
+entry DOWN {
+// No syntax provided
+}
+
+on BARK {
+// No syntax provided
+}
+
+}
+
+state Colorado {
+initial Washington;
+
+
+exit SAVE {
+// No syntax provided
+}
+
+entry START {
+// No syntax provided
+}
+
+on SAVE {
+// No syntax provided
+}
+
+}
+
+}
+}

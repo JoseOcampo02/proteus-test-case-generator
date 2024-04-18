@@ -1,0 +1,8 @@
+
+const string name = "Next CSUN strike when?";
+
+actor Heath_Ledger {
+    statemachine {
+        int result = 620;
+    }
+}

@@ -1,0 +1,7 @@
+
+
+actor Arnold_Schwarzenegger {
+    statemachine {
+        string flag = "input, input, input, inputs!";
+    }
+}

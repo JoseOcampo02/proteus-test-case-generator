@@ -1,8 +1,0 @@
-
-const string nikto = "Proteus words and stuff";
-
-actor Bruce_Willis {
-    statemachine {
-        int add = 785;
-    }
-}

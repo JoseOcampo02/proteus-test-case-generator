@@ -1,0 +1,7 @@
+event CLOSE {int, string};
+
+const string var = "I'd like a free job please! No, I don't have job experience";
+
+actor Morgan_Freeman {
+    bool hydra = true;
+}

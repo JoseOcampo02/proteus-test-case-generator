@@ -138,3 +138,57 @@ File Created: FAIL_t_5.proteus, FAIL_t_6.proteus, FAIL_t_7.proteus, FAIL_t_8.pro
 -----------------------------------------------------------------------------------------------------------------------------
 
 
+Deleted From: TestingSession\Failures
+
+File Deleted: FAIL_t_1.proteus, FAIL_t_10.proteus, FAIL_t_2.proteus, FAIL_t_3.proteus, FAIL_t_4.proteus
+File Deleted: FAIL_t_5.proteus, FAIL_t_6.proteus, FAIL_t_7.proteus, FAIL_t_8.proteus, FAIL_t_9.proteus
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Written To: TestingSession\Failures
+
+File Created: FAIL_testers_1.proteus, FAIL_testers_10.proteus, FAIL_testers_2.proteus, FAIL_testers_3.proteus, FAIL_testers_4.proteus
+File Created: FAIL_testers_5.proteus, FAIL_testers_6.proteus, FAIL_testers_7.proteus, FAIL_testers_8.proteus, FAIL_testers_9.proteus
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Deleted From: TestingSession\Failures
+
+File Deleted: FAIL_testers_1.proteus, FAIL_testers_10.proteus, FAIL_testers_2.proteus, FAIL_testers_3.proteus, FAIL_testers_4.proteus
+File Deleted: FAIL_testers_5.proteus, FAIL_testers_6.proteus, FAIL_testers_7.proteus, FAIL_testers_8.proteus, FAIL_testers_9.proteus
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Written To: TestingSession\Failures
+
+File Created: FAIL_Tester_1.proteus, FAIL_Tester_2.proteus, FAIL_Tester_3.proteus, FAIL_Tester_4.proteus, FAIL_Tester_5.proteus
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Deleted From: TestingSession\Failures
+
+File Deleted: FAIL_Tester_1.proteus, FAIL_Tester_2.proteus, FAIL_Tester_3.proteus, FAIL_Tester_4.proteus, FAIL_Tester_5.proteus
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Written To: TestingSession\Failures
+
+File Created: FAIL_lol_1.proteus, FAIL_lol_10.proteus, FAIL_lol_2.proteus, FAIL_lol_3.proteus, FAIL_lol_4.proteus
+File Created: FAIL_lol_5.proteus, FAIL_lol_6.proteus, FAIL_lol_7.proteus, FAIL_lol_8.proteus, FAIL_lol_9.proteus
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Deleted From: TestingSession\Failures
+
+File Deleted: FAIL_lol_1.proteus, FAIL_lol_10.proteus, FAIL_lol_2.proteus, FAIL_lol_3.proteus, FAIL_lol_4.proteus
+File Deleted: FAIL_lol_5.proteus, FAIL_lol_6.proteus, FAIL_lol_7.proteus, FAIL_lol_8.proteus, FAIL_lol_9.proteus
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Written To: TestingSession\Failures
+
+File Created: FAIL_test_1.proteus, FAIL_test_10.proteus, FAIL_test_2.proteus, FAIL_test_3.proteus, FAIL_test_4.proteus
+File Created: FAIL_test_5.proteus, FAIL_test_6.proteus, FAIL_test_7.proteus, FAIL_test_8.proteus, FAIL_test_9.proteus
+-----------------------------------------------------------------------------------------------------------------------------
+
+

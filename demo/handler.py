@@ -35,6 +35,8 @@ def bruh():
         with open(os.path.join(Paths.FAIL_PATH, f"FAIL_{case_names}_{i + 1}.proteus"),"w", encoding='utf-8') as file:
             file.write(generate_fail_case())
 
+    print("Tests have been stored into the TestingSession Directory under their respective directories.")
+
 
     
     Logger.creation(Paths.FAIL_PATH)

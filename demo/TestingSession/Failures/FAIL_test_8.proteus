@@ -1,0 +1,31 @@
+event JUMP {string, int};
+event MEOW {int};
+
+actor Bruce_Willis {
+
+statemachine {
+initial Alabama;
+
+state Washington {
+initial Wisconsin;
+
+func delete_this() -> string {
+// No syntax provided
+}
+
+exit SHOVE {
+// No syntax provided
+}
+
+entry UP {
+// No syntax provided
+}
+
+on MEOW {
+// No syntax provided
+}
+
+}
+
+}
+}

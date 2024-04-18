@@ -1,9 +1,0 @@
-
-const bool index = true;
-
-actor Keanu_Reeves {
-    statemachine {
-        state Vermont {
-        }
-    }
-}

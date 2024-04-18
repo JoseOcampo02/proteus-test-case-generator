@@ -159,20 +159,8 @@ def GUI():
     window.mainloop()
 
 
-# this jank ass code bro
-def SetArgsToggleable():
-    # global event_count
-    # global global_const_count
-    # global func_count
-    # global actor_count
-    # global actor_item_count
-    # global state_item_count
-    # global safe_var_assign
-    # global safe_event_calling
-    # global max_state_depth
-    
 
-# I had no other coice fr
+def SetArgsToggleable():
     if args.EventCount != SafeTestGenerator.event_count:
         SafeTestGenerator.event_count = args.EventCount
     if args.GlobalConstCount != SafeTestGenerator.global_const_count:

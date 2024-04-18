@@ -1,0 +1,8 @@
+event UP {int, int, string, string};
+
+
+actor Danny_Devito {
+    statemachine {
+        bool script = false;
+    }
+}

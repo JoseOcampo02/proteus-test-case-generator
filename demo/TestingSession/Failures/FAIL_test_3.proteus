@@ -1,0 +1,35 @@
+event TERMINATE {string, bool};
+event LOOK {};
+event DESTROY {};
+event RIGHT {bool};
+event STOP {};
+
+actor Tom_Hanks {
+
+statemachine {
+initial Arkansas;
+
+state Wyoming {
+string value = "input, input, input, inputs!";
+initial Michigan;
+
+func turn_on() -> bool {
+// No syntax provided
+}
+
+exit DOWN {
+// No syntax provided
+}
+
+entry SHOVE {
+// No syntax provided
+}
+
+on LEFT {
+// No syntax provided
+}
+
+}
+
+}
+}

@@ -1,0 +1,58 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+
+public class pp2 {
+public static void main(String[] args) {
+    if (args.length == 0) {
+        System.out.println("Please provide input file as command line argument.");
+        return;
+    }
+
+    try {
+        File file = new File(args[0]);
+        Scanner scanner = new Scanner(file);
+
+        int m = scanner.nextInt();
+        int n = scanner.nextInt();
+
+        int target = scanner.nextInt();
+
+        int[][] array = new int[m][n];
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                array[i][j] = scanner.nextInt();
+            }
+        }
+
+        solve(array, target, 0, m - 1, 0, n - 1);
+
+    } catch (FileNotFoundException e) {
+        System.out.println("File not found.");
+    }
+}
+
+public static void solve(int[][] array, int target, int top, int bottom, int left, int right) {
+    if (top > bottom || left > right) {
+        System.out.println("NOT FOUND");
+        return;
+    }
+
+    int middleRow = (top + bottom) / 2;
+    int middleCol = (left + right) / 2;
+
+    if (array[middleRow][middleCol] == target) {
+        System.out.println("Target found at location: (" + middleRow + ", " + middleCol + ")");
+        return;
+    } else if (array[middleRow][middleCol] > target) {
+        solve(array, target, top, middleRow - 1, left, right);
+        solve(array, target, middleRow, bottom, left, middleCol - 1);
+    } else {
+        solve(array, target, middleRow + 1, bottom, middleCol + 1, right);
+        solve(array, target, top, middleRow, middleCol + 1, right);
+    }
+}
+}
+

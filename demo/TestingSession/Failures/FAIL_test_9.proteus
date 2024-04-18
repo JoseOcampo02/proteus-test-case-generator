@@ -1,0 +1,67 @@
+
+actor Henry_Cavill {
+
+statemachine {
+initial Alaska;
+
+state Maryland {
+int nikto = 558;
+initial Wisconsin;
+
+
+exit STOP {
+// No syntax provided
+}
+
+entry LEFT {
+// No syntax provided
+}
+
+on RESET {
+// No syntax provided
+}
+
+}
+
+state Iowa {
+int nikto = 558;
+initial Kentucky;
+
+
+exit UP {
+// No syntax provided
+}
+
+entry CLOSE {
+// No syntax provided
+}
+
+on TERMINATE {
+// No syntax provided
+}
+
+}
+
+state Colorado {
+initial Nevada;
+
+func job_finder(string total, int foo) -> bool {
+// No syntax provided
+}
+
+exit DESTROY {
+// No syntax provided
+}
+
+entry RESET {
+// No syntax provided
+}
+
+on DESTROY {
+// No syntax provided
+}
+
+}
+
+}
+}
