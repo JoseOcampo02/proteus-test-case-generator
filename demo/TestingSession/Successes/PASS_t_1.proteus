@@ -1,0 +1,6 @@
+event DESTROY {bool, int, bool, string};
+
+
+actor Arnold_Schwarzenegger {
+    bool item = false;
+}

@@ -1,0 +1,106 @@
+event STOP {};
+event MEOW {};
+event SAVE {bool, string};
+
+actor Bruce_Willis {
+
+statemachine {
+initial New_Hampshire;
+
+state Illinois {
+const int var = 999;
+initial Kansas;
+
+
+exit FALL {
+// No syntax provided
+}
+
+entry STOP {
+// No syntax provided
+}
+
+on SHOVE {
+// No syntax provided
+}
+
+}
+
+state Colorado {
+initial New_Hampshire;
+
+func move_up() -> bool {
+// No syntax provided
+}
+
+exit DROP {
+// No syntax provided
+}
+
+entry REST {
+// No syntax provided
+}
+
+on TURN {
+// No syntax provided
+}
+
+}
+
+state Nebraska {
+initial South_Carolina;
+
+
+exit TERMINATE {
+// No syntax provided
+}
+
+entry LEFT {
+// No syntax provided
+}
+
+on FALL {
+// No syntax provided
+}
+
+}
+
+state Arkansas {
+initial Maine;
+
+
+exit START {
+// No syntax provided
+}
+
+entry UP {
+// No syntax provided
+}
+
+on RIGHT {
+// No syntax provided
+}
+
+}
+
+state Oklahoma {
+const string isOff = "Next CSUN strike when?";
+initial Nevada;
+
+
+exit UP {
+// No syntax provided
+}
+
+entry GO {
+// No syntax provided
+}
+
+on LEFT {
+// No syntax provided
+}
+
+}
+
+}
+}

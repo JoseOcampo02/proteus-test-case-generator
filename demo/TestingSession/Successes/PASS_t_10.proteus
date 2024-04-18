@@ -1,0 +1,7 @@
+
+const bool id = false;
+
+actor Morgan_Freeman {
+    statemachine {
+    }
+}

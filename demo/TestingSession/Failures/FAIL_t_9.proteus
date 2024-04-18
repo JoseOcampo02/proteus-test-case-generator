@@ -1,0 +1,28 @@
+event LOOK {};
+event MEOW {};
+
+actor Keanu_Reeves {
+
+statemachine {
+initial Nebraska;
+
+state Oregon {
+initial Maryland;
+
+
+exit LOOK {
+// No syntax provided
+}
+
+entry UP {
+// No syntax provided
+}
+
+on CLOSE {
+// No syntax provided
+}
+
+}
+
+}
+}

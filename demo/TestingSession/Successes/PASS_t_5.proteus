@@ -1,0 +1,7 @@
+event GO {int, bool, int};
+
+const string flag = "input, input, input, inputs!";
+
+actor Samuel_L_Jackson {
+    string scope = "input, input, input, inputs!";
+}

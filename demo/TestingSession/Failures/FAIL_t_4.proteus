@@ -1,0 +1,111 @@
+event START {bool, int};
+
+actor Tom_Hanks {
+
+statemachine {
+initial Michigan;
+
+state Florida {
+initial Arizona;
+
+func job_finder() -> int {
+// No syntax provided
+}
+
+exit MEOW {
+// No syntax provided
+}
+
+entry OPEN {
+// No syntax provided
+}
+
+on DOWN {
+// No syntax provided
+}
+
+}
+
+state Delaware {
+initial Montana;
+
+func hack_the_bank(bool isOff, int timer) {
+// No syntax provided
+}
+
+exit MEOW {
+// No syntax provided
+}
+
+entry JUMP {
+// No syntax provided
+}
+
+on DOWN {
+// No syntax provided
+}
+
+}
+
+state Montana {
+initial Louisiana;
+
+func find_this() -> bool {
+// No syntax provided
+}
+
+exit DOWN {
+// No syntax provided
+}
+
+entry SHOVE {
+// No syntax provided
+}
+
+on DROP {
+// No syntax provided
+}
+
+}
+
+state Indiana {
+initial Arizona;
+
+
+exit START {
+// No syntax provided
+}
+
+entry ACTIVATE {
+// No syntax provided
+}
+
+on SHOVE {
+// No syntax provided
+}
+
+}
+
+state Wisconsin {
+initial Florida;
+
+func turn_off() -> int {
+// No syntax provided
+}
+
+exit LIFT {
+// No syntax provided
+}
+
+entry START {
+// No syntax provided
+}
+
+on DOWN {
+// No syntax provided
+}
+
+}
+
+}
+}

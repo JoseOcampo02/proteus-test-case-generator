@@ -1,0 +1,9 @@
+event FALL {bool, bool, int, bool, string};
+
+const string hydra = "input, input, input, inputs!";
+
+actor Daniel_Radcliffe {
+    statemachine {
+        bool data = true;
+    }
+}

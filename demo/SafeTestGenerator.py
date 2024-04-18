@@ -224,15 +224,15 @@ def generate_actor(IC, depth) -> str:
 def generate_actor_item(IC, depth) -> str:
     actor_item_string = ""
 
-    choices = ['DefHSM', 'DefActorOn', 'DefMember']
+    choices = ['DefHSM',  'DefMember']
 
     choice = random.choice(choices)
 
     match choice:
         case 'DefHSM':
             actor_item_string = generate_statemachine(IC, depth)
-        case 'DefActorOn':
-            actor_item_string = generate_actor_on(IC)
+        #case 'DefActorOn':
+            #actor_item_string = generate_actor_on(IC)
         case 'DefMember':
             actor_item_string = generate_member(IC, depth)
 
