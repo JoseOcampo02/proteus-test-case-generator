@@ -222,7 +222,7 @@ def generate_actor_item(IC, depth) -> str:
         case 'DefHSM':
             actor_item_string = generate_statemachine(IC, depth)
         case 'DefActorOn':
-            actor_item_string = generate_actor_on(IC)
+            actor_item_string = generate_actor_on(IC, depth)
         case 'DefMember':
             actor_item_string = generate_member(IC, depth)
 
@@ -296,10 +296,30 @@ def generate_state(IC, depth) -> str:
 
     return state_string
 
-def generate_actor_on(IC):
+# DefActorOn: 'on' EventMatch OnBlock
+def generate_actor_on(IC, depth) -> str:
     event_name = random.choice(all_event_names)  # picks a random event name
-    on_block = "{\n" + indent(IC + 1) + "pass\n" + indent(IC) + "}\n"
+    on_block = generate_on_block(IC, depth)
+    # on_block = "{\n" + indent(IC + 1) + "pass\n" + indent(IC) + "}\n"
     return indent(IC) + f"on {event_name} {on_block}\n"
+
+# OnBlock: Block
+# Block: '{' Stmt* '}'
+def generate_on_block(IC, depth) -> str:
+    block_string = ""
+    block_string += "{\n"
+    
+    block_string += indent(IC + 1)
+    block_string += "This is a block\n"
+    
+    block_string += indent(IC)
+    block_string += "}\n"
+    
+    return block_string
+
+# OnBody: GoStmt | OnBlock
+def generate_on_body(IC) -> str:
+    pass
 
 # Toggleable
 event_count = 3

@@ -6,6 +6,9 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import ttk, filedialog
 import sys
+import os
+import pathlib
+import time
 #from reloading import reloading
 import string
 
@@ -185,9 +188,9 @@ def SetArgsToggleable():
         func_count = args.FuncCount
     if args.ActorItems != actor_item_count:
         actor_item_count = args.ActorItems
-    if args.ActorsNum != actor_item_count:
+    if args.ActorsNum != actor_count:
         actor_count = args.ActorsNum
-    if args.StateNum != actor_item_count:
+    if args.StateNum != state_item_count:
         state_item_count = args.StateNum
     if args.UnsafeVariableDeclare:
         safe_var_assign = False
@@ -316,13 +319,53 @@ def indent(IC) -> str:
 # -------------------------------------------------------- Program start --------------------------------------------------------------
 
 def printProtey():
-    proteus_program = generate_program()
-    print(proteus_program)
+    
+    start = time.time()
+    
+    # Checks if test case directory exists, if not create it
+    TEST_CASE_PATH = os.path.join(os.path.expanduser("~"), "Desktop", "GeneratedTests")
+    isExist = os.path.isdir(TEST_CASE_PATH)
+    if not isExist:
+        os.makedirs(TEST_CASE_PATH)
+    else:
+        for filename in os.listdir(TEST_CASE_PATH):
+            file_path = os.path.join(TEST_CASE_PATH, filename)
+            try:
+                os.unlink(file_path)
+            except Exception as e:
+                print('Failed to delete %s. Reason: %s' % (file_path, e))
+    
+    # Generates 10000 proteus programs and saves them to a directory
+    for i in range(10000):
+        filename = str(i) + ".proteus"
+        FILE = os.path.join(TEST_CASE_PATH, filename)
+        proteus_program = generate_program()
+        
+        with open(FILE, "w") as f:
+            f.write(proteus_program)
+        
+    end = time.time()
+    length = end - start
+    print("Completed in %s seconds" % (str(length)))
+    
+    # proteus_program = generate_program()
+    # print(proteus_program)
 
 # Generates a proteus program as a string by repeatedly appending to a string
 
 # Program: DefEvent* DefGlobalConst* DefFunc* DefActor+
 def generate_program() -> str:
+    
+    # Creates local copy of name lists
+    global all_state_names
+    global all_actor_names
+    global all_var_names
+    global all_event_names
+    local_all_state_names = all_state_names.copy()
+    local_all_actor_names = all_actor_names.copy()
+    local_all_var_names = all_var_names.copy()
+    local_all_event_names = all_event_names.copy()
+    
     # Start with an empty String
     program = ""
 
@@ -351,6 +394,12 @@ def generate_program() -> str:
     # Define Actors
     for _ in range(rand_num(1, actor_count)):
         program += generate_actor(IC, depth)
+
+    # Resets global name lists, very inefficient bandaid
+    all_state_names = local_all_state_names
+    all_actor_names = local_all_actor_names
+    all_var_names = local_all_var_names
+    all_event_names = local_all_event_names
 
     return program
 
@@ -418,33 +467,28 @@ def generate_actor(IC, depth) -> str:
 
     actor_string = f"actor {actor_name} {{\n"
 
-    for _ in range (rand_num(1, actor_item_count)):
+    for _ in range (rand_num(0, actor_item_count)):
         actor_string += generate_actor_item(IC + 1, depth)
         pass
 
     actor_string += "}\n"
     return actor_string
 
-# ActorItem: DefHSM | DefActorOn | DefMember | DefMethod
+# ActorItem: DefHSM | DefActorOn | DefMember
 def generate_actor_item(IC, depth) -> str:
     actor_item_string = ""
 
-    # DefHSM -> 0
-    # DefActorOn -> 1
-    # DefMember -> 2
-    # DefMethod -> 3
-    #choice = rand_num(0, 0)           # CURRENTLY FORCED TO ONLY PICK DefHSM/DefMember, PENDING IMPLEMENTATION OF OTHER PRODUCTION RULES
-    choice = random.choice([0, 2])
+    choices = ['DefHSM', 'DefActorOn', 'DefMember']
+
+    choice = random.choice(choices)
 
     match choice:
-        case 0:
+        case 'DefHSM':
             actor_item_string = generate_statemachine(IC, depth)
-        case 1:
-            pass
-        case 2:
+        case 'DefActorOn':
+            actor_item_string = generate_actor_on(IC)
+        case 'DefMember':
             actor_item_string = generate_member(IC, depth)
-        case 3:
-            pass
 
     return actor_item_string
 
@@ -515,6 +559,11 @@ def generate_state(IC, depth) -> str:
     state_string += "}\n"
 
     return state_string
+
+def generate_actor_on(IC):
+    event_name = random.choice(all_event_names)  # picks a random event name
+    on_block = "{\n" + indent(IC + 1) + "pass\n" + indent(IC) + "}\n"
+    return indent(IC) + f"on {event_name} {on_block}"
 
 
 main()
