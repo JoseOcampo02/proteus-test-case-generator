@@ -1,0 +1,92 @@
+event MEOW {};
+event GO {};
+
+actor Tom_Hanks {
+
+statemachine {
+initial Tennessee;
+
+state Kentucky {
+initial Wyoming;
+
+
+exit DESTROY {
+// No syntax provided
+}
+
+entry SAVE {
+// No syntax provided
+}
+
+on LIFT {
+// No syntax provided
+}
+
+}
+
+state Ohio {
+const string script = "input, input, input, inputs!";
+initial Missouri;
+
+func save_this() {
+// No syntax provided
+}
+
+exit START {
+// No syntax provided
+}
+
+entry TERMINATE {
+// No syntax provided
+}
+
+on LIFT {
+// No syntax provided
+}
+
+}
+
+state South_Carolina {
+initial South_Dakota;
+
+func start_task() {
+// No syntax provided
+}
+
+exit JUMP {
+// No syntax provided
+}
+
+entry DOWN {
+// No syntax provided
+}
+
+on RIGHT {
+// No syntax provided
+}
+
+}
+
+state Oklahoma {
+initial Louisiana;
+
+func hack_the_bank() {
+// No syntax provided
+}
+
+exit TERMINATE {
+// No syntax provided
+}
+
+entry LIFT {
+// No syntax provided
+}
+
+on CLOSE {
+// No syntax provided
+}
+
+}
+
+}
+}

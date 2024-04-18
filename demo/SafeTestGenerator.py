@@ -77,6 +77,10 @@ remove_used_name = lambda name, name_list: name_list.remove(name)
 # Check if list is empty
 empty_checker = lambda check_list: True if(check_list) else None
 
+#Set code output to none
+
+proteus_program_print = ""
+
 # Clear everything...just like the name suggests
 def clear(var_list, state_list, event_list, actor_list):
     var_list.clear()
@@ -100,9 +104,15 @@ def indent(IC) -> str:
 
 # -------------------------------------------------------- Program start --------------------------------------------------------------
 
-def printProtey():
+def returnProtey():
     proteus_program = generate_program()
-    print(proteus_program)
+    proteus_program_print = proteus_program
+    #print(proteus_program)
+    return proteus_program
+
+def printProtey():
+    print(proteus_program_print)
+    
 
 # Generates a proteus program as a string by repeatedly appending to a string
 
@@ -296,10 +306,10 @@ def generate_state(IC, depth) -> str:
 
     return state_string
 
-def generate_actor_on(IC):
-    event_name = random.choice(all_event_names)  # picks a random event name
-    on_block = "{\n" + indent(IC + 1) + "pass\n" + indent(IC) + "}\n"
-    return indent(IC) + f"on {event_name} {on_block}\n"
+# def generate_actor_on(IC):
+#     event_name = random.choice(all_event_names)  # picks a random event name
+#     on_block = "{\n" + indent(IC + 1) + "pass\n" + indent(IC) + "}\n"
+#     return indent(IC) + f"on {event_name} {on_block}\n"
 
 # Toggleable
 event_count = 1

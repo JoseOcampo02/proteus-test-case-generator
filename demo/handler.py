@@ -4,7 +4,7 @@ from paths import Paths
 from delete import Delete
 from fail_case_gen import generate_fail_case
 from logger import Logger
-from SafeTestGenerator import generate_program
+from SafeTestGenerator import returnProtey
 
 '''
 Useless fucntion I made, GG
@@ -27,12 +27,14 @@ def bruh():
     Logger.deletion(Paths.FAIL_PATH)
     Delete.new_session()
 
+    for i in range(int(not_skill_issues)):
+        with open(os.path.join(Paths.SUCCESS_PATH, f"PASS_{case_names}_{i + 1}.proteus"),"w", encoding='utf-8') as file:
+            file.write(returnProtey())
+
     for i in range(int(skill_issues)):
-        with open(os.path.join(Paths.FAIL_PATH, f"FAIL_{case_names}_{i + 1}.txt"),"w") as file:
+        with open(os.path.join(Paths.FAIL_PATH, f"FAIL_{case_names}_{i + 1}.proteus"),"w", encoding='utf-8') as file:
             file.write(generate_fail_case())
 
-    for i in range(int(not_skill_issues)):
-        with open(os.path.join(Paths.FAIL_PATH, f"PASS_{case_names}_{i + 1}.txt"),"w") as file:
-            file.write(generate_program())
+
     
     Logger.creation(Paths.FAIL_PATH)

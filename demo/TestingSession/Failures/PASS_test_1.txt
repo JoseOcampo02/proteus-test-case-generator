@@ -1,8 +1,0 @@
-
-
-actor Daniel_Radcliffe {
-    on BARK {
-        pass
-    }
-
-}
