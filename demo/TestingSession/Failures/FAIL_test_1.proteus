@@ -1,0 +1,111 @@
+event SAVE {string, string, string, int, int};
+event RESET {int, bool, bool};
+event START {string, int, bool};
+event GO {};
+
+actor Samuel_L_Jackson {
+
+statemachine {
+initial Illinois;
+
+state Florida {
+initial Louisiana;
+
+
+exit DESTROY {
+// No syntax provided
+}
+
+entry OPEN {
+// No syntax provided
+}
+
+on LOOK {
+// No syntax provided
+}
+
+}
+
+state Alaska {
+const int nikto = "input, input, input, inputs!";
+initial Minnesota;
+
+
+exit DROP {
+// No syntax provided
+}
+
+entry SAVE {
+// No syntax provided
+}
+
+on LOOK {
+// No syntax provided
+}
+
+}
+
+state Nebraska {
+initial Iowa;
+
+func start_task(bool hack, string numOfThings, bool nikto, bool hydra, bool config) -> string {
+// No syntax provided
+}
+
+exit TERMINATE {
+// No syntax provided
+}
+
+entry CLOSE {
+// No syntax provided
+}
+
+on LEFT {
+// No syntax provided
+}
+
+}
+
+state Washington {
+const bool index = 636;
+initial Missouri;
+
+
+exit LIFT {
+// No syntax provided
+}
+
+entry LIFT {
+// No syntax provided
+}
+
+on SHOVE {
+// No syntax provided
+}
+
+}
+
+state Missouri {
+const int data = 720;
+initial Connecticut;
+
+func check_this(string temp, int var, bool hydra, int nikto) {
+// No syntax provided
+}
+
+exit TERMINATE {
+// No syntax provided
+}
+
+entry RIGHT {
+// No syntax provided
+}
+
+on UP {
+// No syntax provided
+}
+
+}
+
+}
+}

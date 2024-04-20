@@ -18,19 +18,21 @@ def move_file(file_path, target_folders):
 move_file(ROOT + '/test.txt', [SAVED, 'Logs'])
 '''
 
+
+
 def gen():
-    skill_issues = input("How many fail cases do you want? ")
-    not_skill_issues=input("How many passing cases do you want? ")
+    fail = input("How many fail cases do you want? ")
+    passing =input("How many passing cases do you want? ")
     case_names = input("What do you want to name them?\n(They'll be the name you entered followed by the order they were generated in) ")
 
     Logger.deletion(Paths.FAIL_PATH)
     Delete.new_session()
 
-    for i in range(int(not_skill_issues)):
+    for i in range(int(passing)):
         with open(os.path.join(Paths.SUCCESS_PATH, f"PASS_{case_names}_{i + 1}.proteus"),"w", encoding='utf-8') as file:
             file.write(returnProteus())
 
-    for i in range(int(skill_issues)):
+    for i in range(int(fail)):
         with open(os.path.join(Paths.FAIL_PATH, f"FAIL_{case_names}_{i + 1}.proteus"),"w", encoding='utf-8') as file:
             file.write(generate_fail_case())
 
@@ -39,3 +41,6 @@ def gen():
 
     
     Logger.creation(Paths.FAIL_PATH)
+
+def compile():
+    print("ayo")

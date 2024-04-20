@@ -457,4 +457,14 @@ def generate_fail_case():
     # Final code (a statemachine)
     statemachine = define_statemachine(statemachine)
     gen_code += define_actor(statemachine)
+    if debug:
+        printFail(gen_code)
     return gen_code
+
+def printFail(p):
+    print("FAIL START----------------------------------------------------------------")
+    print(p)
+    print("FAIL END------------------------------------------------------------------")
+    print("\n")
+
+debug = False

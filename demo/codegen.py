@@ -7,8 +7,8 @@ import tkinter as tk
 from tkinter import ttk, filedialog
 import sys
 import SafeTestGenerator
+import fail_case_gen
 from SafeTestGenerator import returnProteus
-from SafeTestGenerator import setDebug
 from handler import gen
 
 #from reloading import reloading
@@ -187,6 +187,7 @@ def SetArgsToggleable():
     if args.DirectoryHandler:
         if args.Debug:
             SafeTestGenerator.debug = True
+            fail_case_gen.debug = True
         gen()
 
         # SafeTestGenerator.debug = True

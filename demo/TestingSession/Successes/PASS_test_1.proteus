@@ -1,0 +1,189 @@
+event SAVE {int, int, int};
+event CLOSE {string, bool};
+event GO {bool, int, string, string, string};
+event SHOVE {string, string, string};
+event REST {int, bool, int, string};
+event LOOK {string, int};
+event FALL {string};
+event LEFT {bool, int, int};
+
+const bool hack = "Testing group is superior";
+const string key = "go touch grass";
+
+actor Morgan_Freeman {
+    statemachine {
+        state Missouri {
+            bool var = "input, input, input, inputs!";
+            bool foo = false;
+            int nikto = false;
+            state Maine {
+                int scope = false;
+                int isOff = true;
+            }
+            state Kansas {
+                bool flag = "Here's a random string";
+                string url = "Wiegley should give us an A";
+                int message = 469;
+                int sum = false;
+                int name = "When will we graduate?";
+                bool config = false;
+            }
+            state West_Virginia {
+            }
+            state Vermont {
+                string timer = "Here's a random string";
+                bool numOfThings = "stuff and fluff";
+            }
+            int value = true;
+            bool map = 754;
+            state New_Mexico {
+                int add = 901;
+                string something = "Help, I'm trapped in here";
+                int script = false;
+                int total = 122;
+            }
+        }
+        int hydra = true;
+        int data = true;
+    }
+    statemachine {
+        state Michigan {
+        }
+        bool redeem = false;
+        state Arizona {
+            state New_Jersey {
+                bool check = 132;
+                bool isOn = false;
+                int item = true;
+            }
+            int count = true;
+            bool index = 430;
+            bool id = false;
+            state South_Dakota {
+                bool temp = "debug this code for a prize";
+                string area = 839;
+                string result = true;
+            }
+        }
+        state Georgia {
+            state Hawaii {
+            }
+            state Nebraska {
+            }
+        }
+    }
+    statemachine {
+        state Maryland {
+            state Wyoming {
+            }
+            state Iowa {
+            }
+            state Alabama {
+            }
+            state Colorado {
+            }
+            state Wisconsin {
+            }
+            state Kentucky {
+            }
+            state Indiana {
+            }
+        }
+        state New_York {
+        }
+        state Florida {
+            state Ohio {
+            }
+            state Pennsylvania {
+            }
+        }
+    }
+}
+actor Rami_Malek {
+    statemachine {
+        state California {
+            state Massachusetts {
+            }
+        }
+        state Minnesota {
+            state Illinois {
+            }
+            state North_Carolina {
+            }
+            state New_Hampshire {
+            }
+        }
+        state South_Carolina {
+        }
+    }
+}
+actor Samuel_L_Jackson {
+    statemachine {
+        state Utah {
+            state Washington {
+            }
+            state Arkansas {
+            }
+        }
+        state Idaho {
+            state Rhode_Island {
+            }
+            state Tennessee {
+            }
+            state North_termDakota {
+            }
+            state Oklahoma {
+            }
+            state Mississippi {
+            }
+            state Alaska {
+            }
+        }
+        state Oregon {
+        }
+    }
+}
+actor Arnold_Schwarzenegger {
+    statemachine {
+        state Texas {
+            state Virginia {
+            }
+            state Delaware {
+            }
+            state Connecticut {
+            }
+        }
+        state Montana {
+        }
+        state Nevada {
+            state Louisiana {
+            }
+        }
+    }
+}
+actor Henry_Cavill {
+}
+actor Daniel_Radcliffe {
+    statemachine {
+    }
+    statemachine {
+    }
+    statemachine {
+    }
+}
+actor Tom_Hanks {
+    statemachine {
+    }
+}
+actor Quentin_Tarantino {
+    statemachine {
+    }
+    statemachine {
+    }
+    statemachine {
+    }
+    statemachine {
+    }
+    statemachine {
+    }
+}
