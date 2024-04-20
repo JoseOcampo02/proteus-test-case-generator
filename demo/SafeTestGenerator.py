@@ -1,6 +1,7 @@
 import random
 import string
 
+
 # All possible usable names, variables, etc.
 
 # State name list
@@ -9,7 +10,7 @@ all_state_names = [
   "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
   "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan",
   "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New_Hampshire",
-  "New_Jersey", "New_Mexico", "New_York", "North_Carolina", "North_Dakota", "Ohio",
+  "New_Jersey", "New_Mexico", "New_York", "North_Carolina", "North_termDakota", "Ohio",
   "Oklahoma", "Oregon", "Pennsylvania", "Rhode_Island", "South_Carolina", "South_Dakota",
   "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West_Virginia",
   "Wisconsin", "Wyoming"
@@ -79,7 +80,7 @@ empty_checker = lambda check_list: True if(check_list) else None
 
 #Set code output to none
 
-proteus_program_print = ""
+
 
 # Clear everything...just like the name suggests
 def clear(var_list, state_list, event_list, actor_list):
@@ -102,16 +103,23 @@ def indent(IC) -> str:
         indent_as_string += "    "
     return indent_as_string
 
+def setDebug (d):
+    debug = d;
+
 # -------------------------------------------------------- Program start --------------------------------------------------------------
 
-def returnProtey():
+def returnProteus():
     proteus_program = generate_program()
-    proteus_program_print = proteus_program
-    #print(proteus_program)
+    if debug: 
+         printProteus(proteus_program)
     return proteus_program
 
-def printProtey():
-    print(proteus_program_print)
+
+def printProteus(p):
+    print("PASS START----------------------------------------------------------------")
+    print(p)
+    print("PASS END------------------------------------------------------------------")
+    print("\n")
     
 
 # Generates a proteus program as a string by repeatedly appending to a string
@@ -321,5 +329,5 @@ state_item_count = 1
 safe_var_assign = True
 safe_event_calling = True
 max_state_depth = 1
-
+debug = False
 

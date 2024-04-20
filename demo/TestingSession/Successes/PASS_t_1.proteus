@@ -1,0 +1,168 @@
+event LOOK {string};
+event JUMP {string, int, string, int};
+event LEFT {bool, int};
+event DROP {int, bool, bool};
+event SAVE {bool, int};
+event UP {bool, string, bool, string, string};
+event RIGHT {bool};
+
+const bool config = "Wiegley should give us an A";
+
+actor Samuel_L_Jackson {
+    statemachine {
+        state Missouri {
+            int redeem = true;
+            int id = true;
+            int isOn = true;
+            bool map = 21;
+            bool timer = 983;
+            state Connecticut {
+                int name = 10;
+            }
+        }
+        int total = false;
+        state Kentucky {
+        }
+        int foo = 900;
+        state West_Virginia {
+            state New_Jersey {
+                string temp = 768;
+                string result = "go touch grass";
+                int flag = "Wiegley should give us an A";
+                string hydra = 25;
+                bool isOff = "Here's a random string";
+                string count = false;
+            }
+        }
+        state Rhode_Island {
+        }
+        state Delaware {
+            state Ohio {
+                int data = true;
+                bool add = 177;
+            }
+            string message = false;
+            state Arkansas {
+            }
+            bool scope = 442;
+            string numOfThings = false;
+            bool key = 331;
+            state Nevada {
+                bool index = false;
+                int something = "I'd like a free job please! No, I don't have job experience";
+                bool script = 120;
+            }
+        }
+        state Nebraska {
+            state Florida {
+                bool url = false;
+                int item = "I'd like a free job please! No, I don't have job experience";
+            }
+            bool var = false;
+            bool area = false;
+            string nikto = false;
+        }
+        string sum = true;
+    }
+    bool value = true;
+    int hack = true;
+    int check = "go touch grass";
+    statemachine {
+        state Georgia {
+            state North_termDakota {
+            }
+            state Maine {
+            }
+            state Oregon {
+            }
+        }
+        state Virginia {
+        }
+    }
+    statemachine {
+    }
+    statemachine {
+        state Idaho {
+            state Kansas {
+            }
+            state New_Hampshire {
+            }
+            state Washington {
+            }
+            state Louisiana {
+            }
+        }
+        state California {
+            state Indiana {
+            }
+            state Arizona {
+            }
+            state Iowa {
+            }
+            state Mississippi {
+            }
+            state Vermont {
+            }
+        }
+        state South_Dakota {
+            state Pennsylvania {
+            }
+        }
+        state Montana {
+            state Alabama {
+            }
+            state Wyoming {
+            }
+            state Hawaii {
+            }
+        }
+    }
+    statemachine {
+        state North_Carolina {
+            state Colorado {
+            }
+        }
+        state Alaska {
+        }
+    }
+}
+actor Henry_Cavill {
+}
+actor Christoph_Waltz {
+    statemachine {
+    }
+    statemachine {
+        state Minnesota {
+            state Oklahoma {
+            }
+            state Illinois {
+            }
+        }
+        state New_Mexico {
+            state Wisconsin {
+            }
+            state New_York {
+            }
+            state Michigan {
+            }
+        }
+        state South_Carolina {
+            state Utah {
+            }
+            state Massachusetts {
+            }
+            state Maryland {
+            }
+        }
+        state Tennessee {
+        }
+    }
+}
+actor Tom_Hanks {
+    statemachine {
+        state Texas {
+        }
+    }
+    statemachine {
+    }
+}

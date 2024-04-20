@@ -1,6 +1,0 @@
-
-const string timer = "Proteus words and stuff";
-
-actor Henry_Cavill {
-    string id = "Here's a random string";
-}

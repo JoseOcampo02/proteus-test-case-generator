@@ -1,0 +1,18 @@
+event TURN {bool};
+event FALL {string, string, string};
+event DOWN {int, int, string};
+event OPEN {int, string, bool, int, bool};
+event BARK {int, string, string, int, int};
+event SHOVE {int};
+event ACTIVATE {bool, string, int};
+event STOP {int, bool, string, bool};
+
+const const const const const const const 
+actor Quentin_Tarantino {
+    statemachine {
+    }
+}
+actor Heath_Ledger {
+    statemachine {
+    }
+}

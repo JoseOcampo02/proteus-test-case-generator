@@ -7,8 +7,10 @@ import tkinter as tk
 from tkinter import ttk, filedialog
 import sys
 import SafeTestGenerator
-from SafeTestGenerator import *
-from handler import bruh
+from SafeTestGenerator import returnProteus
+from SafeTestGenerator import setDebug
+from handler import gen
+
 #from reloading import reloading
 import string
 
@@ -161,6 +163,7 @@ def GUI():
 
 
 def SetArgsToggleable():
+
     if args.EventCount != SafeTestGenerator.event_count:
         SafeTestGenerator.event_count = args.EventCount
     if args.GlobalConstCount != SafeTestGenerator.global_const_count:
@@ -177,14 +180,19 @@ def SetArgsToggleable():
         SafeTestGenerator.safe_var_assign = False
     if args.UnsafeEvent:
         SafeTestGenerator.safe_event_calling = False
-    if args.MaxStateDepth != max_state_depth:
+    if SafeTestGenerator.max_state_depth != args.MaxStateDepth:
         SafeTestGenerator.max_state_depth = args.MaxStateDepth
-
     if args.Debug:
         print("EC: " + str(SafeTestGenerator.event_count) + " GCC: "+ str(SafeTestGenerator.global_const_count) + " FC:"+ str(SafeTestGenerator.func_count) + " AItemC: "+ str(SafeTestGenerator.actor_item_count) +" AC: " + str(SafeTestGenerator.actor_count) + " SItemC: "+ str(SafeTestGenerator.state_item_count) + " SafeVar: " + str(SafeTestGenerator.safe_var_assign) + " SafeEvent: " + str(SafeTestGenerator.safe_event_calling)+ " MSD: " + str(SafeTestGenerator.max_state_depth))
-        printProtey()    
     if args.DirectoryHandler:
-        bruh()
+        if args.Debug:
+            SafeTestGenerator.debug = True
+        gen()
+
+        # SafeTestGenerator.debug = True
+        # returnProteus()   
+
+
 
 def main():
     #print("-h, --help for flags descriptions")

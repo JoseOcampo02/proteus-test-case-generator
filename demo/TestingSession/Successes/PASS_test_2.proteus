@@ -1,8 +1,0 @@
-
-const string add = "When will we graduate?";
-
-actor Tom_Hanks {
-    statemachine {
-        int config = 214;
-    }
-}

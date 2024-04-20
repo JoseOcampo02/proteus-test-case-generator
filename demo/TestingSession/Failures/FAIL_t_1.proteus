@@ -1,0 +1,30 @@
+event SAVE {bool};
+event LIFT {};
+event DESTROY {};
+event CLOSE {};
+
+actor Tom_Hanks {
+
+statemachine {
+initial Kansas;
+
+state Rhode_Island {
+initial Maryland;
+
+
+exit GO {
+// No syntax provided
+}
+
+entry REST {
+// No syntax provided
+}
+
+on DOWN {
+// No syntax provided
+}
+
+}
+
+}
+}

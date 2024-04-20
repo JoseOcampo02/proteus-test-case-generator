@@ -4,8 +4,7 @@ from paths import Paths
 from delete import Delete
 from fail_case_gen import generate_fail_case
 from logger import Logger
-from SafeTestGenerator import returnProtey
-
+from SafeTestGenerator import returnProteus
 '''
 Useless fucntion I made, GG
 def move_file(file_path, target_folders):
@@ -19,7 +18,7 @@ def move_file(file_path, target_folders):
 move_file(ROOT + '/test.txt', [SAVED, 'Logs'])
 '''
 
-def bruh():
+def gen():
     skill_issues = input("How many fail cases do you want? ")
     not_skill_issues=input("How many passing cases do you want? ")
     case_names = input("What do you want to name them?\n(They'll be the name you entered followed by the order they were generated in) ")
@@ -29,7 +28,7 @@ def bruh():
 
     for i in range(int(not_skill_issues)):
         with open(os.path.join(Paths.SUCCESS_PATH, f"PASS_{case_names}_{i + 1}.proteus"),"w", encoding='utf-8') as file:
-            file.write(returnProtey())
+            file.write(returnProteus())
 
     for i in range(int(skill_issues)):
         with open(os.path.join(Paths.FAIL_PATH, f"FAIL_{case_names}_{i + 1}.proteus"),"w", encoding='utf-8') as file:
