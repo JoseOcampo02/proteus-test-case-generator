@@ -1,0 +1,8 @@
+event LEFT {bool, bool, string, string, int};
+
+const string sum = "stuff and fluff";
+const bool hack = false;
+
+actor Tom_Hanks {
+    bool redeem = false;
+}

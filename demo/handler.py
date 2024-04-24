@@ -19,6 +19,9 @@ move_file(ROOT + '/test.txt', [SAVED, 'Logs'])
 '''
 
 
+def one():
+    returnProteus()
+
 
 def gen():
     fail = input("How many fail cases do you want? ")

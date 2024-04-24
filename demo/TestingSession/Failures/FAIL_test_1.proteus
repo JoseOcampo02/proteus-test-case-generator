@@ -1,0 +1,86 @@
+
+actor Rami_Malek {
+
+statemachine {
+initial California;
+
+state Wisconsin {
+int area = 970;
+initial Oklahoma;
+
+
+exit BARK {
+// No syntax provided
+}
+
+entry RIGHT {
+// No syntax provided
+}
+
+on DESTROY {
+// No syntax provided
+}
+
+}
+
+state Wyoming {
+const int check = 37;
+initial Rhode_Island;
+
+func end_clock() -> bool {
+// No syntax provided
+}
+
+exit CLOSE {
+// No syntax provided
+}
+
+entry JUMP {
+// No syntax provided
+}
+
+on DROP {
+// No syntax provided
+}
+
+}
+
+state South_Dakota {
+string foo = "Testing group is superior";
+initial Georgia;
+
+
+exit LEFT {
+// No syntax provided
+}
+
+entry CLOSE {
+// No syntax provided
+}
+
+on UP {
+// No syntax provided
+}
+
+}
+
+state Florida {
+initial Vermont;
+
+
+exit TERMINATE {
+// No syntax provided
+}
+
+entry SAVE {
+// No syntax provided
+}
+
+on LEFT {
+// No syntax provided
+}
+
+}
+
+}
+}

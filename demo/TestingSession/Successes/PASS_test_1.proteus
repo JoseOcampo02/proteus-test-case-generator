@@ -1,0 +1,11 @@
+
+const bool something = false;
+const int key = 913;
+
+actor Christoph_Waltz {
+    statemachine {
+        state Delaware {
+            bool name = false;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+Deleted From: TestingSession\Failures
+
+File Deleted: FAIL_test_1.proteus, FAIL_test_10.proteus, FAIL_test_2.proteus, FAIL_test_3.proteus, FAIL_test_4.proteus
+File Deleted: FAIL_test_5.proteus, FAIL_test_6.proteus, FAIL_test_7.proteus, FAIL_test_8.proteus, FAIL_test_9.proteus
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Written To: TestingSession\Failures
+
+File Created: FAIL_test_1.proteus, FAIL_test_2.proteus
+-----------------------------------------------------------------------------------------------------------------------------
+
+

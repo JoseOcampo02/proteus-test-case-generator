@@ -9,7 +9,7 @@ import sys
 import SafeTestGenerator
 import fail_case_gen
 from SafeTestGenerator import returnProteus
-from handler import gen
+from handler import gen, one
 
 #from reloading import reloading
 import string
@@ -184,6 +184,9 @@ def SetArgsToggleable():
         SafeTestGenerator.max_state_depth = args.MaxStateDepth
     if args.Debug:
         print("EC: " + str(SafeTestGenerator.event_count) + " GCC: "+ str(SafeTestGenerator.global_const_count) + " FC:"+ str(SafeTestGenerator.func_count) + " AItemC: "+ str(SafeTestGenerator.actor_item_count) +" AC: " + str(SafeTestGenerator.actor_count) + " SItemC: "+ str(SafeTestGenerator.state_item_count) + " SafeVar: " + str(SafeTestGenerator.safe_var_assign) + " SafeEvent: " + str(SafeTestGenerator.safe_event_calling)+ " MSD: " + str(SafeTestGenerator.max_state_depth))
+        SafeTestGenerator.debug = True
+        fail_case_gen.debug = True
+        one()
     if args.DirectoryHandler:
         if args.Debug:
             SafeTestGenerator.debug = True
