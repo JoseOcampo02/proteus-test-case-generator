@@ -36,7 +36,7 @@ parser.add_argument("-uE", "--UnsafeEvent", action="store_true", help = "Disable
 parser.add_argument("-depth", "--MaxStateDepth", nargs='?', default=1,  type = int, help = "Maximum # of Nested States", required=False)
 parser.add_argument("-dR", "--DirectoryHandler", action='store_true', help = "Uses Directory Handler to store multilple tests", required=False)
 
-
+ 
 args = parser.parse_args()
 
 

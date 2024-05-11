@@ -1,7 +1,7 @@
 import os
 import shutil
 from paths import Paths
-
+ 
 class Delete():
     # Helper function, delete stuff in just one folder
     @staticmethod

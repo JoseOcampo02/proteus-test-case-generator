@@ -1,8 +1,8 @@
 # Docker
 
 ## About
-
-- A containerzation of both Proteusi
+ 
+- A containerzation of both Proteus
 
 ## Dependencies
 
