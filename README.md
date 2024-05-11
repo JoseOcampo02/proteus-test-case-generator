@@ -22,7 +22,7 @@ These are features which have been fully implemented to the project.
 By tentative, the project contains early versions of these features, but these have yet to be fully finalized.
 
 - Graphical User Interface
-  - The GUI appears through the ``G` Flag, but functionality between GUI and Test Case Generator have yet to be implemented.
+  - The GUI appears through the `-G` Flag, but functionality between GUI and Test Case Generator have yet to be implemented.
 - Shell Interpreter
   - The interpreter appears through the `-S` flag, but functionality between Interpreter and Test Case Generator have yet to be implemented.
 - Auto-Compilation
@@ -121,23 +121,22 @@ If using the executable:
 
 The genereate tests can be found in `TestingSessions` Directory, where passing and failing cases are in their respective directory
 
-<<<<<<< HEAD
-### Collaborators
 
-Jose Ocampo, AB Paxtor Garcia, Sam Skidmore, Mohammad Asim Sheikh, Wayne Rasmussen, Jose Martinez, Zori Badkerhanian, German Wong
-
-
-=======
 ### Alternate Method: Docker
->>>>>>> main
 
 #### Prequisites
 
 - Docker Desktop or equivalent
 
 #### Pull the image
+  ```
+  docker image pull abpaxtor10:proteus
+  ```
 
 #### Docker Run
+  ```
+  docker run -p 1337:22 -it proteus:latest
+  ```
 
 ### Leave container running in the background
 
