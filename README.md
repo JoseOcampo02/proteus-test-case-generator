@@ -130,21 +130,21 @@ The genereate tests can be found in `TestingSessions` Directory, where passing a
 
 #### Pull the image
   ```
-  docker image pull abpaxtor10:proteus
+  docker image pull abpaxtor10/proteus:latest
   ```
 
 #### Docker Run
   ```
-  docker run -p 1337:22 -it proteus:latest
+  docker run -p 1337:22 -it abpaxtor10/proteus:latest
   ```
 
-### Leave container running in the background
+#### Leave container running in the background
 
 CTRL-P, then CTRL-Q
 
 - To return to the containser ssh to localhost:1337, and root credentials are default
 
-### Swapping Modes 
+#### Swapping Modes 
 
 - To use SwiftProteus
   ```
@@ -159,6 +159,7 @@ CTRL-P, then CTRL-Q
 - To use Test Case Generator
   ```
   cd proteus-test-case-generator/demo
+  python3 codegen.py [insert flags]
   ```
 
 
@@ -168,7 +169,7 @@ CTRL-P, then CTRL-Q
 - Sam Skidmore
 - Wayne Rasmussen
 - Zori Badkerhanian
-- Mohammad Sheikh
+- Mohammad Asim Sheikh
 - German Wong
 - Jose Martinez
 - AB Paxtor Garcia
