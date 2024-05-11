@@ -2,7 +2,7 @@ event DESTROY {bool, bool};
 event OPEN {string, string, bool, string};
 event LIFT {};
 event CLOSE {};
-
+ 
 actor Daniel_Radcliffe {
 
 statemachine {

@@ -1,16 +1,14 @@
-FROM ubuntu:20.04
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+FROM ubuntu:22.04
 RUN apt update && apt upgrade -y
+RUN apt-get upgrade -y
 RUN apt install -y wget
 RUN apt install -y openssh-server
 run apt install nano -y
+run apt install python3 -y
 run echo $PATH
 ENV PATH="$PATH:/erc/profile"
 run echo $PATH
-# RUN apt install sudo -y
-# RUN useradd -m admin && echo "admin:admin" | chpasswd && adduser admin sudo
-#USER admin
-#CMD /bin/bash
+
 
 ENTRYPOINT ["/bin/bash"]
 
@@ -24,7 +22,7 @@ run apt install git -y
 
 # Making Directories
 # C++ Proteus
-RUN git clone https://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@github.com/csun-tavlab/proteus.git
+RUN git clone https:[insert token]h@github.com/csun-tavlab/proteus.git
 workdir "/proteus/proteus"
 
 run mkdir -p /proteus/proteus/build
@@ -41,22 +39,20 @@ run echo $PATH
 
 ENV PATH="${PATH}:/proteus/proteus/build"
 
-# Swift Proteus
+# Swift Proteus Installation
 workdir "/proteus"
-# install the swifties
 run apt install clang -y
 run apt install libpython2.7 -y 
 run apt install libpython2.7-dev -y
 run wget https://swift.org/builds/swift-5.8-release/ubuntu2004/swift-5.8-RELEASE/swift-5.8-RELEASE-ubuntu20.04.tar.gz
 run tar xzf swift-5.8-RELEASE-ubuntu20.04.tar.gz
 run mv swift-5.8-RELEASE-ubuntu20.04 /usr/share/swift
-# run echo "export PATH=/usr/share/swift/usr/bin:$PATH" >> /root/.bashrc
-# cmd source /root/.bashrc
+
 ENV PATH="${PATH}:/usr/share/swift/usr/bin"
 
 # Cloning Swift Proteus
 workdir "/proteus"
-run git clone  https://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@github.com/csun-tavlab/swift-proteus.git
+run git clone  https://[insert token]@github.com/csun-tavlab/swift-proteus.git
 
 #Updating files for Swift Proteus
 workdir "/proteus/swift-proteus"         
@@ -73,8 +69,7 @@ run /usr/share/swift/usr/bin/swift build
 
 workdir "/proteus/swift-proteus/.build/debug"
 run mv Proteus SwiftProteus
-#run echo "export PATH=/proteus/swift-proteus/.build/debug:$PATH" >> /root/.bashrc
-#cmd source /root/.bashrc
+
 run echo "export PATH='/proteus/swift-proteus/.build/debug:$PATH'" >> /root/.profile
 run echo $PATH
 
@@ -82,12 +77,14 @@ ENV PATH="${PATH}:/proteus/swift-proteus/.build/debug"
 
 
 workdir "/proteus"
+run git clone https://github.com/JoseOcampo02/proteus-test-case-generator.git
+
 
 
 
 run mkdir /var/run/sshd
 RUN apt install sudo -y
-RUN echo 'root:proteus' | chpasswd
+RUN echo 'root:root' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 CMD ["/usr/sbin/sshd", "-D"]
@@ -99,6 +96,17 @@ run add-apt-repository ppa:maveonair/helix-editor
 run apt update
 run apt install helix
 
+run apt install pip -y
+
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/London
+
+run apt-get install python3-tk -y
+
+workdir "/proteus/proteus-test-case-generator/demo/TestingSession"
+run mkdir GeneratedTests
+
+workdir "/proteus"
 
 ENV TERM=xterm-256color
 RUN echo "PS1='\e[92m\u\e[0m@\e[94m\h\e[0m:\e[35m\w\e[0m# '" >> /root/.bashrc

@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 from paths import Paths
-
+ 
 class Logger():
     @staticmethod
     def __log_message(message):

@@ -8,7 +8,7 @@ state Wisconsin {
 int area = 970;
 initial Oklahoma;
 
-
+ 
 exit BARK {
 // No syntax provided
 }
