@@ -1,0 +1,52 @@
+event DESTROY {bool, bool};
+event OPEN {string, string, bool, string};
+event LIFT {};
+event CLOSE {};
+
+actor Daniel_Radcliffe {
+
+statemachine {
+initial North_Carolina;
+
+state Georgia {
+initial Virginia;
+
+
+exit OPEN {
+// No syntax provided
+}
+
+entry START {
+// No syntax provided
+}
+
+on LIFT {
+// No syntax provided
+}
+
+}
+
+state Illinois {
+int scope = 734;
+initial Montana;
+
+func hack_the_bank() {
+// No syntax provided
+}
+
+exit REST {
+// No syntax provided
+}
+
+entry LOOK {
+// No syntax provided
+}
+
+on ACTIVATE {
+// No syntax provided
+}
+
+}
+
+}
+}
